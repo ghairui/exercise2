@@ -10,10 +10,11 @@ package com.jd.demo;
 public class Test extends ATest{
     public String name="name";
     public static void main(String[] m){
-        System.out.println("i'm here");
-        ATest test = new Test();
-        test.bb();
-        System.out.println(test.name);
+        //System.out.println(test.name);
+        //System.out.println("i'm here");
+        //ATest test = new Test();
+        cc();
+        //System.out.println(test.name);
     }
 
     @Override
@@ -22,6 +23,9 @@ public class Test extends ATest{
     }
 //    @Override
     public void bb() {
-        System.out.println("t.bb");
+        System.out.println(1 << 30);
+    }
+    public static void cc() {
+        System.out.println(1 << 30);
     }
 }
