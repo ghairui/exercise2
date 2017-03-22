@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+<!-- ��ݿ���-->
+	<classPathEntry	location="D:\MavenSpace\repository\mysql\mysql-connector-java\5.1.20\mysql-connector-java-5.1.20.jar"/>
+	<context id="DB2Tables"	targetRuntime="MyBatis3">
+		<commentGenerator>
+			<property name="suppressDate" value="true"/>
+			<!-- �Ƿ�ȥ���Զ���ɵ�ע�� true���� �� false:�� -->
+			<property name="suppressAllComments" value="true"/>
+		</commentGenerator>
+		<!--��ݿ�����URL���û������� -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://172.24.7.206:3306/ins_income" userId="root" password="123456">
+		</jdbcConnection>
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false"/>
+		</javaTypeResolver>
+		<!-- ���ģ�͵İ����λ��-->
+		<javaModelGenerator targetPackage="com.jd.ins.income.domain.po" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true"/>
+			<property name="trimStrings" value="true"/>
+		</javaModelGenerator>
+		<!-- ���ӳ���ļ��İ����λ��-->
+		<sqlMapGenerator targetPackage="com.jd.ins.income.master.dao" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true"/>
+		</sqlMapGenerator>
+		<!-- ���DAO�İ����λ��-->
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.jd.ins.income.master.dao" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true"/>
+		</javaClientGenerator>
+		<!-- Ҫ�����Щ��-->
+		<table tableName="transfer_config" domainObjectName="TransferConfig" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+			<property name="useActualColumnNames" value="true"/>
+		</table>
+		<table tableName="income_task_1" domainObjectName="IncomeTask" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+			<property name="useActualColumnNames" value="true"/>
+		</table>
+		<table tableName="income_detail_1" domainObjectName="IncomeDetail" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+			<property name="useActualColumnNames" value="true"/>
+		</table>
+		<table tableName="clear_repair" domainObjectName="ClearRepair" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+			<property name="useActualColumnNames" value="true"/>
+		</table>
+		<table tableName="income_assignment" domainObjectName="IncomeAssignment" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+			<property name="useActualColumnNames" value="true"/>
+		</table>
+		<table tableName="task_monitor" domainObjectName="TaskMonitor" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+			<property name="useActualColumnNames" value="true"/>
+		</table>
+		<table tableName="ins_certsync" domainObjectName="InsCertSync" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+			<property name="useActualColumnNames" value="true"/>
+		</table>
+		<!-- Ҫ�����Щ��-->
+		<!-- <table tableName="ins_settlement" domainObjectName="Settlement" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+			<property name="useActualColumnNames" value="true"/>
+		</table> -->
+		<!-- <table tableName="user" domainObjectName="UserDto" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		<table tableName="syslogs" domainObjectName="SyslogsDto" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table> -->
+	</context>
+</generatorConfiguration>
